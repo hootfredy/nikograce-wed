@@ -1,32 +1,36 @@
 {
-  "date": "1970년 01월 01일, 목요일 오전 12시 00분",
-  "location": "○○○웨딩, ○층 ○○홀",
-  "gretting": "서로 마주 보며 다져온 사랑을\n이제 함께 한곳을 바라보며 걸어갈 수 있는\n큰 사랑으로 키우고자 합니다.\n저희 두 사람이 사랑의 이름으로 지켜나갈 수 있게\n앞날을 축복해 주시면 감사하겠습니다.",
+  "date": "Minggu, 28 April 2024",
+  "welcome_text": "'Though one may be overpowered, two can defend themselves. A cord of three strands is not quickly broken.'",
+  "bible_verse": "Ecclesiastes 4:12",
+  "location": "Aula Gedung blablabla jalan blablabla",
+  "gretting": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, efficitur quis luctus id, tristique ac nisl. Pellentesque porta finibus risus, id cursus ex pellentesque non. Integer interdum aliquam tristique. Morbi imperdiet, enim maximus facilisis dapibus, libero turpis scelerisque mauris, ut laoreet dui nibh in justo. Nunc vehicula fringilla tellus non mattis. Aliquam congue finibus arcu posuere ultrices. Aliquam erat volutpat. Ut vulputate orci eget nisl pharetra, at interdum arcu placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam ac ante accumsan magna semper varius. Etiam non ipsum leo.Etiam erat erat, fermentum sit amet venenatis at, dapibus non ligula. In auctor eget erat ut hendrerit. Maecenas lacus justo, pretium eget augue at, blandit ultrices quam. Curabitur at tortor sed augue accumsan tincidunt. Aliquam tempor neque pellentesque pellentesque finibus. Aliquam egestas congue dignissim. Aenean suscipit vestibulum maximus. Fusce pretium massa vitae lacinia sollicitudin. Pellentesque sed tempus elit. Nulla in tincidunt nulla. Ut eu suscipit metus, et consequat dolor. Integer in enim tellus.  ",
   "groom": {
-    "name": "○○○",
-    "account_number": "○○은행 ***-***-******",
+    "name": "Nico Kohar",
+    "nickname": "Nico",
+    "account_number": "Anak kedua dari blablabla",
     "parents": {
       "mother": {
-        "name": "○○○",
-        "account_number": "○○은행 ***-***-******"
+        "name": "Ibu Sunny",
+        "account_number": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, efficitur"
       },
       "father": {
-        "name": "○○○",
-        "account_number": "○○은행 ***-***-******"
+        "name": "Alm. Bpk Renny Freddy Kohar",
+        "account_number": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, efficitur"
       }
     }
   },
   "bride": {
-    "name": "○○○",
-    "account_number": "○○은행 ***-***-******",
+    "name": "Grace",
+    "nickname": "Grace",
+    "account_number": "Anak pertama dari blablablabla",
     "parents": {
       "mother": {
-        "name": "○○○",
-        "account_number": "○○은행 ***-***-******"
+        "name": "Ibu OOOOOOOOOO",
+        "account_number": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, efficitur"
       },
       "father": {
-        "name": "○○○",
-        "account_number": "○○은행 ***-***-******"
+        "name": "Alm. Bapak OOOOOOOOOOOOO",
+        "account_number": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, efficitur"
       }
     }
   },

@@ -10,8 +10,9 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontSize: "2vh",
+  fontSize: "4.5vh",
   fontWeight: "bold",
+  fontFamily: '"Calligraffitti", cursive',
   opacity: 0.85,
   marginBottom: 0,
 });
@@ -47,7 +48,7 @@ export default function Gallery() {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>우리의 아름다운 순간</Title>
+        <Title>Our Moments</Title>
       </Divider>
       <ImageGallery
         showPlayButton={false}

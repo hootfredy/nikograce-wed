@@ -19,8 +19,9 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontSize: "2vh",
+  fontSize: "4.5vh",
   fontWeight: "bold",
+  fontFamily: '"Calligraffitti", cursive',
   opacity: 0.85,
   marginBottom: 0,
 });
@@ -103,27 +104,9 @@ export default function Share({ data }: ShareProps) {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>청첩장 공유하기</Title>
+        <Title>Kirim hadiah</Title>
       </Divider>
-      <KakaoTalkShareButton
-        style={{ margin: 8 }}
-        icon={<MessageFilled />}
-        id="sendKakao"
-        size="large"
-        onClick={() => setShareCount(shareCount + 1)}
-      >
-        카카오톡으로 공유하기
-      </KakaoTalkShareButton>
-      <CopyToClipboard text={data?.kakaotalk?.wedding_invitation_url ?? ""}>
-        <LinkShareButton
-          style={{ margin: 8 }}
-          icon={<LinkOutlined />}
-          size="large"
-          onClick={() => message.success("청첩장 링크가 복사되었습니다.")}
-        >
-          링크로 공유하기
-        </LinkShareButton>
-      </CopyToClipboard>
+      
     </Wrapper>
   );
 }

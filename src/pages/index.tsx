@@ -44,33 +44,37 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:type" content="website" />
-        <meta content="○○○❤○○○ 결혼식에 초대합니다" name="Title" />
+        <meta content="Nico ❤ Grace - Undangan Pernikahan" name="Title" />
         <meta
-          content="○○○○년 ○○월 ○○일 ○요일 오전 ○○시 ○○분"
+          content="Minggu 28 April 2024"
           name="Description"
         />
-        <meta content="○○○○년 ○○월 ○○일 ○요일 오전 ○○시 ○○분" name="Keyword" />
-        <meta property="og:title" content="○○○❤○○○ 결혼식에 초대합니다" />
+        <meta content="Minggu 28 April 2024" name="Keyword" />
+        <meta property="og:title" content="Nico ❤ Grace - Undangan Pernikahan" />
         <meta
           property="og:description"
-          content="○○○○년 ○○월 ○○일 ○요일 오전 ○○시 ○○분"
+          content="Minggu 28 April 2024"
         />
         <meta
           property="og:url"
           content="https://kyuhyuk.kr/wedding-invitation"
         />
         <meta name="theme-color" content="#BCAAA4" />
-        <title>○○○❤○○○ 결혼식에 초대합니다</title>
+        <title>Nico ❤ Grace - Undangan Pernikahan</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Nothing+You+Could+Do&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Nothing+You+Could+Do&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></link>
       </Head>
       <main className={`${notoSansKR.className}`}>
-        <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
         <Title data={JsonData} />
         <Gretting data={JsonData} />
         <Gallery />
         <Location />
         <CongratulatoryMoney data={JsonData} />
         <Share data={JsonData} />
-        <Footer>Copyright © 2021 KyuHyuk Lee</Footer>
+        <Footer>This wedding invitation made by hoofredy - contact me to build yours!</Footer>
       </main>
     </>
   );

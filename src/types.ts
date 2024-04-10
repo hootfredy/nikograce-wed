@@ -1,9 +1,12 @@
 type Data = {
+  welcome_text: string;
+  bible_verse: string;
   date: string;
   location: string;
   gretting: string;
   groom: {
     name: string;
+    nickname: string;
     account_number: string;
     parents: {
       mother: {
@@ -18,6 +21,7 @@ type Data = {
   };
   bride: {
     name: string;
+    nickname: string;
     account_number: string;
     parents: {
       mother: {

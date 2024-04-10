@@ -10,9 +10,10 @@ const Layout = styled("div", {
 });
 
 const TitleWrapper = styled("div", {
+  backgroundColor: "rgba(255,255,255,0.5) !important",
   position: "absolute",
   width: "100%",
-  top: "20%",
+  top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
   textAlign: "center",
@@ -24,7 +25,7 @@ const TitleWrapper = styled("div", {
 });
 
 const VideoBackground = styled("video", {
-  backgroundColor: "#aeb8b3 !important",
+  backgroundColor: "rgba(255,255,255,0.5) !important",
   opacity: 0.9,
   objectFit: "cover",
   objectPosition: "center center",
@@ -34,23 +35,33 @@ const VideoBackground = styled("video", {
 });
 
 const WeddingInvitation = styled("p", {
-  fontSize: "1.5vh",
-  opacity: 0.45,
-  marginBottom: 16,
+  fontFamily: '"Alex Brush", cursive',
+  fontWeight: 400,
+  fontStyle: "normal",
+  fontSize: "6vh",
+  opacity: 0.65,
 });
 
 const GroomBride = styled("p", {
-  fontSize: "3.5vh",
+  fontSize: "8vh",
   fontWeight: "bold",
+  fontFamily: '"Calligraffitti", cursive',
   opacity: 0.9,
   marginBottom: 16,
 });
 
 const Schedule = styled("p", {
-  fontSize: "2vh",
+  fontSize: "4.5vh",
+  fontWeight: "normal",
+  fontFamily: '"Calligraffitti", cursive',
   opacity: 0.65,
   marginBottom: 24,
 });
+
+const WelcomeText = styled("p", {
+  fontFamily: 'font-family: "Petrona", serif;',
+  margin: '20px',
+})
 
 type TitleProps = {
   data?: Data;
@@ -60,18 +71,20 @@ export default function Title({ data }: TitleProps) {
   return (
     <Layout>
       <VideoBackground autoPlay loop muted playsInline={true}>
-        <source src="./assets/BackgroundVideo.mp4" type="video/mp4" />
+        <source src="./assets/video_wedding_test.mp4" type="video/mp4" />
       </VideoBackground>
       <TitleWrapper>
-        <WeddingInvitation>WEDDING INVITATION</WeddingInvitation>
+        <WeddingInvitation>Undangan Pernikahan</WeddingInvitation>
+
         <GroomBride>
-          {data?.groom?.name} &#38; {data?.bride?.name}
+          {data?.groom?.nickname} &#38; {data?.bride?.nickname}
         </GroomBride>
         <Schedule>
           {data?.date}
-          <br />
-          {data?.location}
         </Schedule>
+
+        <WelcomeText>{data?.welcome_text}</WelcomeText>
+        <WelcomeText>{data?.bible_verse}</WelcomeText>
       </TitleWrapper>
     </Layout>
   );

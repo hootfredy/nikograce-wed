@@ -1,5 +1,6 @@
+import { offset } from "@popperjs/core";
 import { styled } from "@stitches/react";
-import { Divider } from "antd";
+import { Col, Divider, Image, Row } from "antd";
 
 const Wrapper = styled("div", {
   background: "#efebe9",
@@ -8,8 +9,9 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontSize: "2vh",
-  fontWeight: "bold",
+  fontSize: "4.5vh",
+  fontWeight: "normal",
+  fontFamily: '"Calligraffitti", cursive',
   opacity: 0.85,
   marginBottom: 0,
 });
@@ -24,7 +26,20 @@ const Content = styled("div", {
 });
 
 const GroomBride = styled("p", {
+  fontSize: "3vh",
+  fontWeight: "normal",
+  fontFamily: '"Calligraffitti", cursive',
+  lineHeight: 1.75,
+  opacity: 0.85,
+  marginBottom: 0,
+  width: "100%",
+  textAlign: "center",
+});
+
+const GroomBrideSubtitle = styled("p", {
   fontSize: "1.75vh",
+  fontWeight: "normal",
+  fontFamily: '"Calligraffitti", cursive',
   lineHeight: 1.75,
   opacity: 0.85,
   marginBottom: 0,
@@ -40,25 +55,48 @@ export default function Gretting({ data }: GrettingProps) {
   return (
     <Wrapper>
       <Divider style={{ marginTop: 0, marginBottom: 32 }} plain>
-        <Title>결혼합니다</Title>
+        <Title>Yang Berbahagia</Title>
       </Divider>
-      <Content>
-        {data?.gretting?.split("\n")?.map((value, index) => {
-          return (
-            <div key={index}>
-              {value}
-              <br />
-            </div>
-          );
-        })}
-      </Content>
-      <GroomBride>
-        {data?.groom?.parents?.father?.name} ·{" "}
-        {data?.groom?.parents?.mother?.name}의 장남 {data?.groom?.name}
-        <br />
-        {data?.bride?.parents?.father?.name} ·{" "}
-        {data?.bride?.parents?.mother?.name}의 장녀 {data?.bride?.name}
-      </GroomBride>
+    
+      <Row justify="start" align="top">
+        <Col xs={10} md={{ offset:8, span: 8}}>
+          <Image
+            width={'100%'}
+            src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+          />
+        </Col>
+        <Col xs={14} md={24}>
+          <GroomBride>
+            ~ The Bride ~ <br/>
+            {data?.bride?.name}
+            <GroomBrideSubtitle>
+              Anak kedua dari tiga bersaudara <br/>
+              {data?.bride?.parents?.mother?.name} dan {data?.bride?.parents?.father?.name}
+            </GroomBrideSubtitle>
+          </GroomBride>
+        </Col>
+      </Row>
+      <Divider plain></Divider>
+      <Row justify="end" align="top">
+      <Col xs={14} md={24}>
+          <GroomBride>
+            ~ The Groom ~ <br/>
+            {data?.groom?.name}
+            <GroomBrideSubtitle>
+              Anak kedua dari empat bersaudara <br/>
+              {data?.groom?.parents?.mother?.name} dan {data?.groom?.parents?.father?.name}
+            </GroomBrideSubtitle>
+          </GroomBride>
+        </Col>
+        <Col xs={10} md={{ pull:8, span: 8}}>
+          <Image
+            width={'100%'}
+            src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+          />
+        </Col>
+        
+      </Row>
+
     </Wrapper>
   );
 }
