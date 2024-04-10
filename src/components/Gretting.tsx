@@ -1,4 +1,3 @@
-import { offset } from "@popperjs/core";
 import { styled } from "@stitches/react";
 import { Col, Divider, Image, Row } from "antd";
 
