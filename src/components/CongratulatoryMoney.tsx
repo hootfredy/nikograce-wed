@@ -1,6 +1,6 @@
 import { CheckCircleTwoTone } from "@ant-design/icons";
 import { styled } from "@stitches/react";
-import { Button, Checkbox, Col, Divider, Form, FormInstance, GetProp, Input, Modal, Row, Space, message } from "antd";
+import { Button, Checkbox, Col, Divider, Form, FormInstance, GetProp, Input, Modal, Radio, RadioChangeEvent, Row, Space, message } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import React, { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
@@ -61,10 +61,6 @@ interface SubmitButtonProps {
   form: FormInstance;
 }
 
-const onChange: GetProp<typeof Checkbox.Group, 'onChange'> = (checkedValues) => {
-  console.log('checked = ', checkedValues);
-};
-
 
 const SubmitButton: React.FC<React.PropsWithChildren<SubmitButtonProps>> = ({ form, children }) => {
   const [submittable, setSubmittable] = React.useState<boolean>(false);
@@ -91,10 +87,24 @@ export default function CongratulatoryMoney({
 }: CongratulatoryMoneyProps) {
   const [form] = Form.useForm();
   const options = [
-    { label: 'Acara Lamaran', value: 'lamaran' },
+    { label: 'Ya, Saya bisa datang', value: 'lamaran' },
     { label: 'Pemberkatan Gereja', value: 'gereja' },
     { label: 'Resepsi Pernikahan', value: 'resepsi' },
   ];
+
+  let hadirBoolean = false;
+
+  const onChangeHadir = (e: RadioChangeEvent) => {
+    console.log('radio checked', e.target.value);
+  };
+
+  const onChangeAkomodasi = (e: RadioChangeEvent) => {
+    console.log('radio checked', e.target.value);
+  };
+
+  const onFinish = (values: any) => {
+    console.log(values);
+  };
 
   return (
     <Wrapper>
@@ -119,8 +129,11 @@ export default function CongratulatoryMoney({
               <TextArea rows={4} />
             </Form.Item>
 
-            <Form.Item name="acara" label="Saya bisa hadir di acara berikut:">
-              <Checkbox.Group options={options} onChange={onChange} />
+            <Form.Item name="acara" label="Bisa hadir di acara kami?">
+              <Radio.Group onChange={onChangeHadir} value={hadirBoolean}>
+                <Radio value={true}>Ya saya bisa hadir</Radio>
+                <Radio value={false}>Tidak, saya tidak bisa hadir</Radio>
+              </Radio.Group>
             </Form.Item>
 
             <Form.Item>

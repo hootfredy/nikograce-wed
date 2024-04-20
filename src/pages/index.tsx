@@ -4,7 +4,7 @@ import { Noto_Sans_KR } from "next/font/google";
 import dynamic from "next/dynamic";
 import { styled } from "@stitches/react";
 import JsonData from "@/data.json";
-import Script from "next/script";
+import { useRouter } from 'next/router'
 
 const Title = dynamic(() => import("@/components/Title"), { ssr: false });
 const Gretting = dynamic(() => import("@/components/Gretting"), { ssr: false });
@@ -38,6 +38,8 @@ const Footer = styled("footer", {
 });
 
 export default function Home() {
+  const router = useRouter()
+  let beneficiaryName = router.query.name;
   return (
     <>
       <Head>
@@ -68,7 +70,7 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Nothing+You+Could+Do&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></link>
       </Head>
       <main className={`${notoSansKR.className}`}>
-        <Title data={JsonData} />
+        <Title data={JsonData} beneficiary={beneficiaryName}/>
         <Gretting data={JsonData} />
         <Gallery />
         <Location />

@@ -31,16 +31,16 @@ const images = [
     thumbnail: "./assets/Gallery_Photo_3.png",
   },
   {
-    original: "./assets/Gallery_Photo_4.png",
-    thumbnail: "./assets/Gallery_Photo_4.png",
+    original: "./assets/Gallery_Photo_4.jpg",
+    thumbnail: "./assets/Gallery_Photo_4.jpg",
   },
   {
-    original: "./assets/Gallery_Photo_5.png",
-    thumbnail: "./assets/Gallery_Photo_5.png",
+    original: "./assets/Gallery_Photo_5.jpg",
+    thumbnail: "./assets/Gallery_Photo_5.jpg",
   },
   {
-    original: "./assets/Gallery_Photo_6.png",
-    thumbnail: "./assets/Gallery_Photo_6.png",
+    original: "./assets/Gallery_Photo_6.jpg",
+    thumbnail: "./assets/Gallery_Photo_6.jpg",
   },
 ];
 

@@ -5,9 +5,9 @@
   "location": "Aula Gedung blablabla jalan blablabla",
   "gretting": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, efficitur quis luctus id, tristique ac nisl. Pellentesque porta finibus risus, id cursus ex pellentesque non. Integer interdum aliquam tristique. Morbi imperdiet, enim maximus facilisis dapibus, libero turpis scelerisque mauris, ut laoreet dui nibh in justo. Nunc vehicula fringilla tellus non mattis. Aliquam congue finibus arcu posuere ultrices. Aliquam erat volutpat. Ut vulputate orci eget nisl pharetra, at interdum arcu placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam ac ante accumsan magna semper varius. Etiam non ipsum leo.Etiam erat erat, fermentum sit amet venenatis at, dapibus non ligula. In auctor eget erat ut hendrerit. Maecenas lacus justo, pretium eget augue at, blandit ultrices quam. Curabitur at tortor sed augue accumsan tincidunt. Aliquam tempor neque pellentesque pellentesque finibus. Aliquam egestas congue dignissim. Aenean suscipit vestibulum maximus. Fusce pretium massa vitae lacinia sollicitudin. Pellentesque sed tempus elit. Nulla in tincidunt nulla. Ut eu suscipit metus, et consequat dolor. Integer in enim tellus.  ",
   "groom": {
-    "name": "Nico Kohar",
-    "nickname": "Nico",
-    "account_number": "Anak kedua dari blablabla",
+    "name": "Niko Kohar",
+    "nickname": "Niko",
+    "account_number": "Anak kedua dari empat bersaudara",
     "parents": {
       "mother": {
         "name": "Ibu Sunny",
@@ -20,16 +20,16 @@
     }
   },
   "bride": {
-    "name": "Grace",
+    "name": "Grace Thamarisca Filladelfia",
     "nickname": "Grace",
-    "account_number": "Anak pertama dari blablablabla",
+    "account_number": "Anak Kedua dari tiga bersaudara",
     "parents": {
       "mother": {
-        "name": "Ibu OOOOOOOOOO",
+        "name": "Ibu Minarni",
         "account_number": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, efficitur"
       },
       "father": {
-        "name": "Alm. Bapak OOOOOOOOOOOOO",
+        "name": "Alm. Bapak Tarya Sucitra",
         "account_number": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex neque, efficitur"
       }
     }

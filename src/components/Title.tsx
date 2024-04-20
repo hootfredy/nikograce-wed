@@ -63,15 +63,28 @@ const WelcomeText = styled("p", {
   margin: '20px',
 })
 
+const BeneficiaryText = styled("p", {
+  fontSize: "2.5vh",
+  fontFamily: 'font-family: "Petrona", serif;',
+  margin: '20px',
+})
+
 type TitleProps = {
   data?: Data;
+  beneficiary?: String;
 };
 
-export default function Title({ data }: TitleProps) {
+export default function Title({ data, beneficiary }: TitleProps) {
+  const maybeRenderBeneficiary = function() {
+    if ( beneficiary ) {
+        return <BeneficiaryText>Kepada Yth. {beneficiary} di tempat.</BeneficiaryText>;
+    }
+  }
+
   return (
     <Layout>
       <VideoBackground autoPlay loop muted playsInline={true}>
-        <source src="./assets/video_wedding_test.mp4" type="video/mp4" />
+        <source src="./assets/FINAL_VIDEO.mp4" type="video/mp4" />
       </VideoBackground>
       <TitleWrapper>
         <WeddingInvitation>Undangan Pernikahan</WeddingInvitation>
@@ -83,8 +96,10 @@ export default function Title({ data }: TitleProps) {
           {data?.date}
         </Schedule>
 
+        {maybeRenderBeneficiary()}
         <WelcomeText>{data?.welcome_text}</WelcomeText>
         <WelcomeText>{data?.bible_verse}</WelcomeText>
+        
       </TitleWrapper>
     </Layout>
   );
