@@ -53,6 +53,7 @@ export default function Home() {
         />
         <meta content="Minggu 28 April 2024" name="Keyword" />
         <meta property="og:title" content="Nico ❤ Grace - Undangan Pernikahan" />
+        <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta
           property="og:description"
           content="Minggu 28 April 2024"
@@ -70,12 +71,14 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Nothing+You+Could+Do&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></link>
       </Head>
       <main className={`${notoSansKR.className}`}>
+        <audio loop autoPlay>
+            <source src="/assets/kawin.mp3" type="audio/filetype" />
+        </audio>
         <Title data={JsonData} beneficiary={beneficiaryName}/>
         <Gretting data={JsonData} />
         <Gallery />
         <Location />
         <CongratulatoryMoney data={JsonData} />
-        <Share data={JsonData} />
         <Footer>This wedding invitation made by hoofredy - contact me to build yours!</Footer>
       </main>
     </>

@@ -1,6 +1,6 @@
 import { LinkOutlined, MessageFilled } from "@ant-design/icons";
 import { styled } from "@stitches/react";
-import { Button, Divider, message } from "antd";
+import { Button, Col, Divider, Row, message } from "antd";
 import { useEffect, useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 
@@ -58,6 +58,17 @@ const LinkShareButton = styled(Button, {
   },
 });
 
+const GiftText = styled("p", {
+  fontSize: "4vh",
+  fontWeight: "normal",
+  fontFamily: '"Calligraffitti", cursive',
+  lineHeight: 1.75,
+  opacity: 0.85,
+  marginBottom: 0,
+  width: "100%",
+  textAlign: "center",
+});
+
 type ShareProps = {
   data?: Data;
 };
@@ -107,6 +118,17 @@ export default function Share({ data }: ShareProps) {
         <Title>Kirim hadiah</Title>
       </Divider>
       
+      <Row justify={"space-around"} align={"middle"}>
+        <Col>
+          <GiftText>Kirim hadiah ke </GiftText>
+          <GiftText>
+            Bank : Mandiri
+            No : 9000037285104 
+            Atas Nama : Niko Kohar
+          </GiftText>
+        </Col>
+      </Row>
+
     </Wrapper>
   );
 }

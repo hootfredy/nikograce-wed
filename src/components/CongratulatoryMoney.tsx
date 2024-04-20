@@ -101,10 +101,23 @@ export default function CongratulatoryMoney({
     console.log('radio checked', e.target.value);
   };
 
-  const onFinish = (values: any) => {
+  const onFinish = async (values: any) => {
     console.log(values);
     console.log("put the logic to send to api here")
     setSubmitSuccess(true)
+    const rawResponse = await fetch('https://wfaubagpq6ivb2cyjqiwwqwh7i0doadk.lambda-url.ap-southeast-1.on.aws/', {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        "access-control-allow-origin" : "*",
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(values)
+    });
+    const content = await rawResponse.json();
+
+    
   };
 
   const ThankyouText = styled("p", {
@@ -129,17 +142,17 @@ export default function CongratulatoryMoney({
             <Form.Item name="name" label="Nama" rules={[{ required: true }]}>
               <Input />
             </Form.Item>
-            <Form.Item name="address" label="Alamat / Asal" rules={[{ required: true }]}>
+            <Form.Item name="alamat" label="Alamat / Asal" rules={[{ required: true }]}>
               <Input />
             </Form.Item>
             <Form.Item name="phone" label="Nomor HP / Telepon / Whatsapp" rules={[{ required: true }]}>
               <Input />
             </Form.Item>
-            <Form.Item name="wishes" label="Ucapan" rules={[{ required: false }]}>
+            <Form.Item name="pesan" label="Ucapan" rules={[{ required: false }]}>
               <TextArea rows={4} />
             </Form.Item>
 
-            <Form.Item name="acara" label="Bisa hadir di acara kami?">
+            <Form.Item name="hadir" label="Bisa hadir di acara kami?">
               <Radio.Group onChange={onChangeHadir} value={hadirBoolean}>
                 <Radio value={true}>Ya saya bisa hadir</Radio>
                 <Radio value={false}>Tidak, saya tidak bisa hadir</Radio>
