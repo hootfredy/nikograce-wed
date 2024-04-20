@@ -25,7 +25,7 @@ const Content = styled("div", {
 });
 
 const GroomBride = styled("p", {
-  fontSize: "3vh",
+  fontSize: "4vh",
   fontWeight: "normal",
   fontFamily: '"Calligraffitti", cursive',
   lineHeight: 1.75,
@@ -36,7 +36,7 @@ const GroomBride = styled("p", {
 });
 
 const GroomBrideSubtitle = styled("p", {
-  fontSize: "1.75vh",
+  fontSize: "2vh",
   fontWeight: "normal",
   fontFamily: '"Calligraffitti", cursive',
   lineHeight: 1.75,
@@ -58,39 +58,39 @@ export default function Gretting({ data }: GrettingProps) {
       </Divider>
     
       <Row justify="start" align="top">
-        <Col xs={10} md={{ offset:8, span: 8}}>
+        <Col xs={{ offset: 2, span: 8}} md={{ offset:8, span: 8}}>
           <Image
             width={'100%'}
-            src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+            src="/assets/GRACE_EDITED.png"
           />
         </Col>
-        <Col xs={14} md={24}>
+        <Col xs={{ offset: 1, span: 12}} md={24}>
           <GroomBride>
             ~ The Bride ~ <br/>
             {data?.bride?.name}
             <GroomBrideSubtitle>
               Anak kedua dari tiga bersaudara <br/>
-              {data?.bride?.parents?.mother?.name} dan {data?.bride?.parents?.father?.name}
+              {data?.bride?.parents?.mother?.name} <br/> dan <br/> {data?.bride?.parents?.father?.name}
             </GroomBrideSubtitle>
           </GroomBride>
         </Col>
       </Row>
       <Divider plain></Divider>
       <Row justify="end" align="top">
-      <Col xs={14} md={24}>
+      <Col xs={{ pull: 2, span: 12}} md={24}>
           <GroomBride>
             ~ The Groom ~ <br/>
             {data?.groom?.name}
             <GroomBrideSubtitle>
               Anak kedua dari empat bersaudara <br/>
-              {data?.groom?.parents?.mother?.name} dan {data?.groom?.parents?.father?.name}
+              {data?.groom?.parents?.mother?.name} <br/> dan <br/> {data?.groom?.parents?.father?.name}
             </GroomBrideSubtitle>
           </GroomBride>
         </Col>
-        <Col xs={10} md={{ pull:8, span: 8}}>
+        <Col xs={{ pull: 2, span: 8}} md={{ pull:8, span: 8}}>
           <Image
             width={'100%'}
-            src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+            src="/assets/NIKO_EDITED.png"
           />
         </Col>
         
