@@ -104,6 +104,7 @@ export default function CongratulatoryMoney({
 
   const onFinish = (values: any) => {
     console.log(values);
+    console.log("put the logic to send to api here")
   };
 
   return (
@@ -115,7 +116,7 @@ export default function CongratulatoryMoney({
       
       <Row justify={"space-around"} align={"middle"}>
         <Col sm={{ span: 12 }}>
-          <Form form={form} name="validateOnly" layout="vertical" autoComplete="off" initialValues={{ size: 'large' }}>
+          <Form form={form} name="validateOnly" layout="vertical" autoComplete="off" initialValues={{ size: 'large' }} onFinish={onFinish}>
             <Form.Item name="name" label="Nama" rules={[{ required: true }]}>
               <Input />
             </Form.Item>

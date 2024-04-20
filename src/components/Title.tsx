@@ -71,7 +71,7 @@ const BeneficiaryText = styled("p", {
 
 type TitleProps = {
   data?: Data;
-  beneficiary?: String;
+  beneficiary?: string | string[] | undefined;
 };
 
 export default function Title({ data, beneficiary }: TitleProps) {
