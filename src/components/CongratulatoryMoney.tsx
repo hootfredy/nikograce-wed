@@ -20,34 +20,10 @@ const Title = styled("p", {
 });
 
 const Content = styled("p", {
-  fontFamily: 'font-family: "Petrona", serif;',
+  fontFamily: 'Petrona", serif',
   fontSize: "2.5vh",
   lineHeight: 1.75,
   opacity: 0.75,
-  marginBottom: 24,
-});
-
-const SubContent = styled("p", {
-  fontFamily: 'font-family: "Petrona", serif;',
-  fontSize: "1.3vh",
-  lineHeight: 1.75,
-  opacity: 0.75,
-  marginBottom: 24,
-});
-
-const Description = styled("p", {
-  fontFamily: 'font-family: "Petrona", serif;',
-  fontSize: "1.3vh",
-  lineHeight: 1.75,
-  opacity: 0.65,
-  marginTop: 8,
-});
-
-const ContactButton = styled("div", {
-  display: "inline-block",
-  textAlign: "center",
-  marginLeft: 24,
-  marginRight: 24,
   marginBottom: 24,
 });
 
@@ -122,7 +98,7 @@ export default function CongratulatoryMoney({
 
   const ThankyouText = styled("p", {
     fontSize: "2.5vh",
-    fontFamily: 'font-family: "Petrona", serif;',
+    fontFamily: '"Petrona", serif',
     margin: '20px',
   })
 

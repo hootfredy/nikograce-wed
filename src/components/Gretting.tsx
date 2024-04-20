@@ -35,7 +35,7 @@ const GroomBride = styled("p", {
   textAlign: "center",
 });
 
-const GroomBrideSubtitle = styled("p", {
+const GroomBrideSubtitle = styled("span", {
   fontSize: "2vh",
   fontWeight: "normal",
   fontFamily: '"Calligraffitti", cursive',
@@ -66,11 +66,12 @@ export default function Gretting({ data }: GrettingProps) {
         </Col>
         <Col xs={{ offset: 1, span: 12}} md={{ offset: 0, span: 24}}>
           <GroomBride>
-            ~ The Bride ~ <br/>
+            &#127801; The Bride &#127801;<br/>
             {data?.bride?.name}
+            <br/>
             <GroomBrideSubtitle>
               Anak kedua dari tiga bersaudara <br/>
-              {data?.bride?.parents?.mother?.name} <br/> dan <br/> {data?.bride?.parents?.father?.name}
+              {data?.bride?.parents?.mother?.name} dan {data?.bride?.parents?.father?.name}
             </GroomBrideSubtitle>
           </GroomBride>
         </Col>
@@ -79,11 +80,11 @@ export default function Gretting({ data }: GrettingProps) {
       <Row justify="end" align="top">
       <Col xs={{ pull: 2, span: 12}} md={{ pull: 0, span: 24}}>
           <GroomBride>
-            ~ The Groom ~ <br/>
-            {data?.groom?.name}
+            &#128330; The Groom &#128330; <br/>
+            {data?.groom?.name} <br/>
             <GroomBrideSubtitle>
               Anak kedua dari empat bersaudara <br/>
-              {data?.groom?.parents?.mother?.name} <br/> dan <br/> {data?.groom?.parents?.father?.name}
+              {data?.groom?.parents?.mother?.name} dan {data?.groom?.parents?.father?.name}
             </GroomBrideSubtitle>
           </GroomBride>
         </Col>

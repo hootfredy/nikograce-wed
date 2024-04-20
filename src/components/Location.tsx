@@ -18,6 +18,15 @@ const Title = styled("p", {
   marginBottom: 0,
 });
 
+
+const Description = styled("p", {
+  fontSize: "3vh",
+  fontWeight: "normal",
+  fontFamily: '"Petrona", serif',
+  opacity: 0.85,
+  marginBottom: 0,
+});
+
 const Image = styled("img", {
   width: "75%",
   maxWidth: 1024,
@@ -50,11 +59,11 @@ export default function Location() {
             hoverable
             cover={<img alt="example" src="https://cdn-image.hipwee.com/wp-content/uploads/2016/11/hipwee-cb2773a6b13409878404c9fd99e8dcf5-750x500.jpg" />}
           >
-            <p>Minggu, 28 April 2024</p>
-            <p>Jam 10:00 WIB - selesai</p>
-            <p>Hotel Grand Mansion 2</p>
-            <p>Jl. Irian No.29, Jajar, Kanigoro, Kec. Kanigoro, Kabupaten Blitar, Jawa Timur</p>
-            <p><a target="_blank" href="https://g.co/kgs/S6fV5tv">Google Map</a></p>
+            <Description>Minggu, 28 April 2024</Description>
+            <Description>Jam 10:00 WIB - selesai</Description>
+            <Description>Hotel Grand Mansion 2</Description>
+            <Description>Jl. Irian No.29, Jajar, Kanigoro, Kec. Kanigoro, Kabupaten Blitar, Jawa Timur</Description>
+            <p><a target="_blank" href="https://g.co/kgs/S6fV5tv">Klik disini untuk Google Map</a></p>
           </Card>
         </Col>
 
@@ -66,7 +75,7 @@ export default function Location() {
           color: '#3b3b3b',
   background: "transparent",
   padding: "10px",
-  fontFamily: 'font-family: "Petrona", serif;',
+  fontFamily: '"Petrona", serif',
   margin: "auto",
   width: '294px',
   boxShadow: 'none',

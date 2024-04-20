@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { styled } from "@stitches/react";
 import JsonData from "@/data.json";
 import { useRouter } from 'next/router'
+import ReactAudioPlayer from "react-audio-player";
 
 const Title = dynamic(() => import("@/components/Title"), { ssr: false });
 const Gretting = dynamic(() => import("@/components/Gretting"), { ssr: false });
@@ -37,8 +38,26 @@ const Footer = styled("footer", {
   "-webkit-box-pack": "center",
 });
 
+
 export default function Home() {
   const router = useRouter()
+  useEffect(()=> {
+    document.onmouseover = function() {
+      var existingSoundEl = document.getElementById('audio-player')
+      if (!existingSoundEl) {
+        var sound      = document.createElement('audio');
+        sound.id       = 'audio-player';
+        sound.controls = false;
+        sound.src      = '/assets/kawin.mp3';
+        var rootEl = document.getElementById('mainwrapper')
+        if (rootEl) {
+          rootEl.appendChild(sound)
+          sound.play()
+        }
+      }
+    }
+  }, [])
+
   let beneficiaryName = router.query.name;
   return (
     <>
@@ -70,10 +89,7 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Nothing+You+Could+Do&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Nothing+You+Could+Do&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></link>
       </Head>
-      <main className={`${notoSansKR.className}`}>
-        <audio loop autoPlay>
-            <source src="/assets/kawin.mp3" type="audio/filetype" />
-        </audio>
+      <main id={`mainwrapper`} className={`${notoSansKR.className}`}>
         <Title data={JsonData} beneficiary={beneficiaryName}/>
         <Gretting data={JsonData} />
         <Gallery />

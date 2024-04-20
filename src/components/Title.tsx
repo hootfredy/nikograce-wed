@@ -59,13 +59,13 @@ const Schedule = styled("p", {
 });
 
 const WelcomeText = styled("p", {
-  fontFamily: 'font-family: "Petrona", serif;',
+  fontFamily: '"Petrona", serif',
   margin: '20px',
 })
 
 const BeneficiaryText = styled("p", {
   fontSize: "2.5vh",
-  fontFamily: 'font-family: "Petrona", serif;',
+  fontFamily: '"Petrona", serif',
   margin: '20px',
 })
 
