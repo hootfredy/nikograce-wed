@@ -71,7 +71,7 @@ export default function Location() {
   width: '294px',
   boxShadow: 'none',
   textTransform: 'uppercase', border: '1px solid black',
-  letterSpacing: '2px',}} href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20240428T030000Z%2F20240428T093000Z&details=Acara%20Pemberkatan%20%3A%20Aula%20Gereja%20XXXX&location=Blitar&text=Nico%20%26%20Grace%20-%20Pernikahan">
+  letterSpacing: '2px',}} href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20240428T030000Z%2F20240428T100000Z&details=Alamat%20%3A%20%0AHotel%20Grand%20Mansion%202%0AJl.%20Irian%20No.29%2C%20Jajar%2C%20Kanigoro%2C%20Kec.%20Kanigoro%2C%20Kabupaten%20Blitar%2C%20Jawa%20Timur%0A%0Ahttps%3A%2F%2Fg.co%2Fkgs%2FS6fV5tv&location=Hotel%20Grand%20Mansion%202%20-%20Blitar%2C%20Jawa%20Timur&text=Niko%20%26%20Grace%20Wedding%20Ceremony">
             Simpan acara di kalenderku
           </a>
         </Col>
