@@ -57,7 +57,7 @@ export default function Location() {
             title="Pemberkatan & Resepsi Pernikahan"
             style={{ width: "100%" }}
             hoverable
-            cover={<img alt="example" src="https://cdn-image.hipwee.com/wp-content/uploads/2016/11/hipwee-cb2773a6b13409878404c9fd99e8dcf5-750x500.jpg" />}
+            cover={<img alt="example" src="/assets/RESEPSI.png" />}
           >
             <Description>Minggu, 28 April 2024</Description>
             <Description>Jam 10:00 WIB - selesai</Description>
