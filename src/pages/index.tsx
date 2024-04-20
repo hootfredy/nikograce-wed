@@ -63,7 +63,7 @@ export default function Home() {
           content="https://nikogracewedding.netlify.app/"
         />
         <meta name="theme-color" content="#BCAAA4" />
-        <title>Nico ❤ Grace - Undangan Pernikahan</title>
+        <title>Niko ❤ Grace - Undangan Pernikahan</title>
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
         <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet"></link>
