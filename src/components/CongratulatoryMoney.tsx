@@ -1,9 +1,7 @@
-import { CheckCircleTwoTone } from "@ant-design/icons";
 import { styled } from "@stitches/react";
 import { Button, Checkbox, Col, Divider, Form, FormInstance, GetProp, Input, Modal, Radio, RadioChangeEvent, Row, Space, message } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import React, { useState } from "react";
-import CopyToClipboard from "react-copy-to-clipboard";
 
 const Wrapper = styled("div", {
   background: "#efebe9",
@@ -83,8 +81,9 @@ const SubmitButton: React.FC<React.PropsWithChildren<SubmitButtonProps>> = ({ fo
 };
 
 export default function CongratulatoryMoney({
-  data,
+  data
 }: CongratulatoryMoneyProps) {
+  const [submitSuccess, setSubmitSuccess] = React.useState<boolean>(false);
   const [form] = Form.useForm();
   const options = [
     { label: 'Ya, Saya bisa datang', value: 'lamaran' },
@@ -105,7 +104,14 @@ export default function CongratulatoryMoney({
   const onFinish = (values: any) => {
     console.log(values);
     console.log("put the logic to send to api here")
+    setSubmitSuccess(true)
   };
+
+  const ThankyouText = styled("p", {
+    fontSize: "2.5vh",
+    fontFamily: 'font-family: "Petrona", serif;',
+    margin: '20px',
+  })
 
   return (
     <Wrapper>
@@ -115,7 +121,10 @@ export default function CongratulatoryMoney({
       <Content>Kami sangat menantikan kehadiran bapak/ibu/saudara/teman yang terkasih dalam acara yang berbahagia ini. Mohon untuk mengkonfirmasi kehadiran Anda dengan mengisi formulir berikut</Content>
       
       <Row justify={"space-around"} align={"middle"}>
-        <Col sm={{ span: 12 }}>
+        <Col sm={{ span: 12 }} className={!submitSuccess? 'hidden' : undefined}>
+          <ThankyouText>Terima kasih sudah mengisi form ini! Tuhan memberkati!</ThankyouText>;
+        </Col>
+        <Col sm={{ span: 12 }} className={submitSuccess? 'hidden' : undefined}>
           <Form form={form} name="validateOnly" layout="vertical" autoComplete="off" initialValues={{ size: 'large' }} onFinish={onFinish}>
             <Form.Item name="name" label="Nama" rules={[{ required: true }]}>
               <Input />

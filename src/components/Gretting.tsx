@@ -64,7 +64,7 @@ export default function Gretting({ data }: GrettingProps) {
             src="/assets/GRACE_EDITED.png"
           />
         </Col>
-        <Col xs={{ offset: 1, span: 12}} md={24}>
+        <Col xs={{ offset: 1, span: 12}} md={{ offset: 0, span: 24}}>
           <GroomBride>
             ~ The Bride ~ <br/>
             {data?.bride?.name}
@@ -77,7 +77,7 @@ export default function Gretting({ data }: GrettingProps) {
       </Row>
       <Divider plain></Divider>
       <Row justify="end" align="top">
-      <Col xs={{ pull: 2, span: 12}} md={24}>
+      <Col xs={{ pull: 2, span: 12}} md={{ pull: 0, span: 24}}>
           <GroomBride>
             ~ The Groom ~ <br/>
             {data?.groom?.name}
