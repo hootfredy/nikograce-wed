@@ -46,13 +46,13 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:type" content="website" />
-        <meta content="Nico ❤ Grace - Undangan Pernikahan" name="Title" />
+        <meta content="Niko ❤ Grace - Undangan Pernikahan" name="Title" />
         <meta
           content="Minggu 28 April 2024"
           name="Description"
         />
         <meta content="Minggu 28 April 2024" name="Keyword" />
-        <meta property="og:title" content="Nico ❤ Grace - Undangan Pernikahan" />
+        <meta property="og:title" content="Niko ❤ Grace - Undangan Pernikahan" />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta
           property="og:description"
