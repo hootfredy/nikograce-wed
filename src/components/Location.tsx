@@ -51,7 +51,7 @@ export default function Location() {
             cover={<img alt="example" src="https://cdn-image.hipwee.com/wp-content/uploads/2016/11/hipwee-cb2773a6b13409878404c9fd99e8dcf5-750x500.jpg" />}
           >
             <p>Minggu, 28 April 2024</p>
-            <p>Jam 09:00 WIB - selesai</p>
+            <p>Jam 10:00 WIB - selesai</p>
             <p>Hotel Grand Mansion 2</p>
             <p>Jl. Irian No.29, Jajar, Kanigoro, Kec. Kanigoro, Kabupaten Blitar, Jawa Timur</p>
             <p><a target="_blank" href="https://g.co/kgs/S6fV5tv">Google Map</a></p>
