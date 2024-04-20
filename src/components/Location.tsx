@@ -20,7 +20,7 @@ const Title = styled("p", {
 
 
 const Description = styled("p", {
-  fontSize: "3vh",
+  fontSize: "2vh",
   fontWeight: "normal",
   fontFamily: '"Petrona", serif',
   opacity: 0.85,
